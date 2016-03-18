@@ -6,44 +6,17 @@ import s from './Posts.module.scss';
 
 class Posts extends Component {
   componentDidMount() {
-    this.props.dispatch(getPosts())
-  }
-
-  renderPosts() {
-    const { posts } = this.props;
-
-    if (!posts.length) {
-      return <div>No posts.</div>;
-    }
-
-    return posts.map((post, i) => {
-      return <div key={post.id} style={{marginBottom: 20}}>
-        <Link
-          to={`/posts/${post.id}`}
-          className={s.title}
-        >
-          {post.title}
-        </Link>
-      </div>
-    })
+    // TODO: fetch all posts
   }
 
   render() {
-    if (this.props.isLoadingPosts) {
-      return <div>Loading...</div>
-    }
-    return <div>
-      <h1 style={{marginBottom: 40}}>All Posts</h1>
-      <h2 style={{marginBottom: 20, color: '#999'}}>{this.props.posts.length} posts</h2>
-      <div>{this.renderPosts()}</div>
-    </div>;
+    // TODO: loading
+
+    // TODO: render all posts
   }
 }
 
-function mapState(state) {
-  return {
-    posts: state.posts.ids.map(id => state.entities.posts[id]),
-    isLoadingPosts: state.posts.isLoading
-  };
-}
+// TODO: write mapState function to map redux state to `posts` props.
+// And also loading flag too,
+
 export default connect(mapState)(Posts);

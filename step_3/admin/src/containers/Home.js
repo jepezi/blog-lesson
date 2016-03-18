@@ -4,29 +4,16 @@ import { getPosts } from '../redux/modules/posts';
 
 class Home extends Component {
   componentDidMount() {
-    this.props.dispatch(getPosts())
+    // TODO: fetch all posts
   }
 
   render() {
-    if (! this.props.posts.length) {
-      return <div>Loading...</div>
-    }
+    // TODO: loading
 
-    return <div>
-      <div>
-        <h1>Admin Dashboard</h1>
-        <h3 style={{color: '#999'}}>Stats</h3>
-        <div>
-          <h2>{this.props.posts.length} posts</h2>
-        </div>
-      </div>
-    </div>;
+    // TODO: shows number of posts
   }
 }
 
-function mapState(state) {
-  return {
-    posts: state.posts.ids.map(id => state.entities.posts[id])
-  };
-}
+// TODO: write mapState function to map redux state to `posts` props.
+
 export default connect(mapState)(Home);

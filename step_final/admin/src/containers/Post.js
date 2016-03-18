@@ -145,6 +145,7 @@ Post.contextTypes = {
 function mapStateToProps(state, props) {
   const post = state.entities.posts
     && state.entities.posts[props.params.id];
+
   const comments = post
     && post.comments
     && post.comments.map(id => state.entities.comments[id]);

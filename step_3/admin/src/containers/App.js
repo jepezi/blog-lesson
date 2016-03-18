@@ -8,6 +8,7 @@ class App extends Component {
     this.state = { flash: null }
   }
 
+  // Handle simple flash message
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.state
       && nextProps.location.state.flash
