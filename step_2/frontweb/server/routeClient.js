@@ -4,7 +4,7 @@ const RendererClass = __DEVELOPMENT__
   : require('../public/dist/prerenderer/main.js');
 
 // TODO: Create stat object based on env.
-// if dev, use hotStat
+// if dev, use `hotStat`
 // if prod, use stat from 'webpack-stats.json'
 // stat's shape { publicPath, assetsByChunkName }
 
@@ -18,7 +18,13 @@ const renderer = new RendererClass({
 });
 
 module.exports = function renderClient(req, res) {
-  // TODO: render our app
-  // 
-  // renderer.render(req, ...)
+  // NOTE: render our app
+  //
+  renderer.render(req, (err, redirect, html) => {
+    // TODO: handle error with statusCode, contentType and message
+    //
+    // TODO: handle redirect
+    //
+    // TODO: response with html contentType and html content
+  })
 };

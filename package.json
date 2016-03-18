@@ -4,8 +4,11 @@
   "description": "Let's begin with the blog template in `public` folder. (Based on an awesome repo here https://github.com/BlackrockDigital/startbootstrap-clean-blog)",
   "main": "index.js",
   "scripts": {
+    "dev:play": "npm run start:play",
+      "start:play": "node ./step_play/frontweb/server/hotServer.js",
+
     "dev:0": "npm run start:0",
-      "start:0": "node ./step_0_finish/frontweb/server/hotServer.js",
+      "start:0": "node ./step_0/frontweb/server/hotServer.js",
 
     "dev:1": "npm run start:1 & npm run server:dev:1",
       "start:1": "node ./step_1/frontweb/server/hotServer.js",

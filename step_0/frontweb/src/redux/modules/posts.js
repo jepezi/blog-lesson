@@ -4,9 +4,27 @@ import handleActions from '../../lib/redux-actions/handleActions';
 // NOTE: import normalizr
 import { Schema, arrayOf } from 'normalizr';
 
-// TODO: Change into object with this shape { isLoading, ids }
+// TODO: Change array to object with this shape { isLoading, ids }
 const initialState = [];
 
+/** ------------------------------------------------------------
+ * Reducer
+ * ------------------------------------------------------------
+ */
+
+// 'posts' reducer
+//
+// NOTE: handleActions accepts reducer map object and initialState.
+// It returns reducer function that handles each action type in the map.
+// Also support handling each sequence type, start, next, throw.
+// So instead of creating function like
+//
+// function posts(state, action) {
+//   ...
+// }
+//
+// and handle action type and sequence type manually,
+// we use handleActions helper.
 export default handleActions({
   'posts/get': {
     start: state => state, // TODO: override isLoading: true
@@ -22,6 +40,12 @@ export default handleActions({
     }
   }
 }, initialState)
+
+
+/** ------------------------------------------------------------
+ * Action Creator
+ * ------------------------------------------------------------
+ */
 
 // TODO: create post schema
 

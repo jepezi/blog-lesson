@@ -47,9 +47,9 @@ class MainRenderer {
       }
 
       // prefetch & hydrate store
-      const { params, location } = renderProps;
+      const { params, location, components } = renderProps;
 
-      const prefetchMethods = renderProps.components
+      const prefetchMethods = components
         .filter(c => c.fetchData)
         .reduce((acc, c) => acc.concat(c.fetchData), []);
 
