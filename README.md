@@ -158,7 +158,12 @@ babel-plugin-transform-runtime \
 babel-polyfill \
 babel-register \
 body-parser \
-express-session \
+classnames \
+compression \
+dotenv \
+express \
+hpp \
+helmet \
 isomorphic-fetch \
 lodash \
 normalizr \
@@ -168,7 +173,8 @@ react-markdown \
 react-redux \
 react-router \
 redux \
-serialize-javascript
+serialize-javascript \
+serve-favicon
 ```
 
 ```
@@ -181,18 +187,20 @@ babel-preset-es2015-native-modules \
 babel-preset-react \
 babel-preset-react-hmre \
 babel-preset-stage-2 \
+compression-webpack-plugin \
 css-loader \
-express \
 extract-text-webpack-plugin \
 file-loader \
 json-loader \
 node-sass \
+npm-run-all \
 postcss-loader \
 redux-logger \
 rimraf \
 sass-loader \
 stats-webpack-plugin \
 style-loader \
+url-loader \
 webpack@2.1.0-beta.4 \
 webpack-dev-middleware \
 webpack-hot-middleware
